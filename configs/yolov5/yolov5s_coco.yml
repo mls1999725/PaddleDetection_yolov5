@@ -1,0 +1,14 @@
+_BASE_:
+  [
+    "../datasets/coco_detection.yml",
+    "../runtime.yml",
+    "_base_/optimizer.yml",
+    "_base_/yolov5s.yml",
+    "_base_/yolov5_reader.yml",
+  ]
+
+snapshot_epoch: 1
+weights: output/yolov5s_coco/model_final
+
+
+

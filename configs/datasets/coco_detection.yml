@@ -1,0 +1,20 @@
+metric: COCO
+num_classes: 80
+
+TrainDataset:
+  !COCODataSet
+    image_dir: images/train2017
+    anno_path: annotations/instances_train2017_391895.json
+    dataset_dir: ../datasets/coco
+    data_fields: ['image', 'gt_bbox', 'gt_class', 'is_crowd']
+
+EvalDataset:
+  !COCODataSet
+    image_dir: images/val2017
+    anno_path: annotations/instances_val2017.json
+    dataset_dir: ../datasets/coco
+    data_fields: ['image', 'gt_bbox', 'gt_class', 'is_crowd']
+
+TestDataset:
+  !ImageFolder
+    anno_path: annotations/instances_val2017.json
